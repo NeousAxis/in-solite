@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>(In)solite</title>
   <style>
     :root {
       --primary-color: #ffffff;
       --text-color: #93A192;
       --accent-color: #C0CEC5;
-      --section-one-bg: #F5F7FA;
-      --section-two-bg: #EBEFF1;
-      --section-three-bg: #E4E9EB;
     }
 
     body {
@@ -19,35 +16,38 @@
       font-family: 'Helvetica Neue', sans-serif;
       background-color: var(--primary-color);
       color: var(--text-color);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
     }
 
     header {
-      padding: 2rem 1rem 1rem;
+      padding: 4rem 1rem 2rem;
+    }
+
+    header img {
+      width: 120px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1, h2 {
+      font-weight: 300;
     }
 
     section {
       max-width: 800px;
-      padding: 3rem 2rem;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
     }
 
-    .concept {
-      background-color: var(--section-one-bg);
+    .ambiances-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
     }
 
-    .unique {
-      background-color: var(--section-two-bg);
-    }
-
-    .ambiances {
-      background-color: var(--section-three-bg);
-    }
-
-    h2 {
-      color: var(--text-color);
+    .ambiance {
+      flex: 1 1 220px;
     }
 
     .button {
@@ -59,50 +59,51 @@
       font-size: 1rem;
       cursor: pointer;
       text-decoration: none;
+      display: inline-block;
+      margin-top: 2rem;
     }
 
     footer {
       padding: 2rem 1rem;
       font-size: 0.8rem;
     }
-
-    .section-content {
-      margin-bottom: 2rem;
-    }
   </style>
 </head>
 <body>
   <header>
-    <img src="LOGO IN-SOLITE.jpg" alt="Logo (In)solite" width="160" />
-    <p><strong>Danse. Lumière. Lieux inattendus.</strong><br>Sans alcool, mais plein de vie.</p>
+    <img src="LOGO IN-SOLITE.jpg" alt="Logo (In)solite" />
+    <h1>Danse. Lumière. Lieux inattendus.</h1>
+    <p>Sans alcool, mais plein de vie</p>
   </header>
 
-  <section class="concept">
+  <section>
     <h2>Concept</h2>
-    <div class="section-content">
-      <p>(In)solite réinvente la fête en la sortant des sentiers battus.<br>
-      Pas de nuit blanche, pas d’ivresse – mais de la lumière, du rythme et des lieux surprenants.<br>
-      Nous emmenons les gens danser dans des lieux insolites. Ici, la musique se vit en pleine conscience, en pleine journée, dans un esprit de joie, de liberté et de reconnexion.</p>
-    </div>
+    <p>(In)solite réinvente la fête en la sortant des sentiers battus.<br>
+    Pas de nuit blanche, pas d’ivresse – mais de la lumière, du rythme et des lieux surprenants.<br>
+    Nous emmenons les gens danser dans des lieux insolites. Ici, la musique se vit en pleine conscience, en pleine journée, dans un esprit de joie, de liberté et de reconnexion.</p>
   </section>
 
-  <section class="unique">
+  <section>
     <h2>Ce qui rend (In)solite unique</h2>
-    <div class="section-content">
-      <p><strong>Des lieux atypiques à découvrir à chaque édition :</strong><br>
-      rooftops, bureaux, cafés, champs, galeries d’art...</p>
-      <p><strong>Pas d’alcool</strong>, mais des boissons qui stimulent autrement :<br>
-      café de spécialité, matcha, infusions, softs artisanaux</p>
-      <p><strong>Une ambiance inclusive</strong>, bienveillante, loin du clubbing conventionnel</p>
-    </div>
+    <p><strong>Des lieux atypiques à découvrir à chaque édition :</strong><br>
+    rooftops, bureaux, cafés, champs, galeries d’art...</p>
+    <p><strong>Pas d’alcool</strong>, mais des boissons qui stimulent autrement :<br>
+    café de spécialité, matcha, infusions, softs artisanaux</p>
+    <p><strong>Une ambiance inclusive</strong>, bienveillante, loin du clubbing conventionnel</p>
   </section>
 
-  <section class="ambiances">
+  <section>
     <h2>3 Ambiances</h2>
-    <div class="section-content">
-      <p><strong>Morning Rise</strong> : 6h00 – 13h00 (Café Croissants – Matcha – Tchaï Latté)</p>
-      <p><strong>Midday Groove</strong> : 10h00 – 16h00 (Brunch & Sound)</p>
-      <p><strong>Golden Hour</strong> : 17h00 – 21h00 (Apéritif sans alcool & softs artisanaux)</p>
+    <div class="ambiances-container">
+      <div class="ambiance">
+        <p><strong>Morning Rise</strong><br>6h00 – 13h00<br>Café Croissants – Matcha – Tchaï Latté</p>
+      </div>
+      <div class="ambiance">
+        <p><strong>Midday Groove</strong><br>10h00 – 16h00<br>Brunch & Sound</p>
+      </div>
+      <div class="ambiance">
+        <p><strong>Golden Hour</strong><br>17h00 – 21h00<br>Apéritif sans alcool & softs artisanaux</p>
+      </div>
     </div>
     <a href="#" class="button">S'inscrire à la prochaine session</a>
   </section>
