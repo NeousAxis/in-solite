@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>(In)solite</title>
   <style>
     :root {
       --primary-color: #ffffff;
       --text-color: #93A192;
       --accent-color: #C0CEC5;
-      --highlight-color: #D8DAF5;
+      --section-one-bg: #F5F7FA;
+      --section-two-bg: #EBEFF1;
+      --section-three-bg: #E4E9EB;
     }
 
     body {
@@ -29,11 +31,23 @@
 
     section {
       max-width: 800px;
-      padding: 1rem 2rem 3rem;
+      padding: 3rem 2rem;
+    }
+
+    .concept {
+      background-color: var(--section-one-bg);
+    }
+
+    .unique {
+      background-color: var(--section-two-bg);
+    }
+
+    .ambiances {
+      background-color: var(--section-three-bg);
     }
 
     h2 {
-      color: var(--highlight-color);
+      color: var(--text-color);
     }
 
     .button {
@@ -51,6 +65,10 @@
       padding: 2rem 1rem;
       font-size: 0.8rem;
     }
+
+    .section-content {
+      margin-bottom: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -59,26 +77,33 @@
     <p><strong>Danse. Lumière. Lieux inattendus.</strong><br>Sans alcool, mais plein de vie.</p>
   </header>
 
-  <section>
+  <section class="concept">
     <h2>Concept</h2>
-    <p>(In)solite réinvente la fête en la sortant des sentiers battus.<br>
-    Pas de nuit blanche, pas d’ivresse – mais de la lumière, du rythme et des lieux surprenants.<br>
-    Nous emmenons les gens danser dans des lieux insolites. Ici, la musique se vit en pleine conscience, en pleine journée, dans un esprit de joie, de liberté et de reconnexion.</p>
+    <div class="section-content">
+      <p>(In)solite réinvente la fête en la sortant des sentiers battus.<br>
+      Pas de nuit blanche, pas d’ivresse – mais de la lumière, du rythme et des lieux surprenants.<br>
+      Nous emmenons les gens danser dans des lieux insolites. Ici, la musique se vit en pleine conscience, en pleine journée, dans un esprit de joie, de liberté et de reconnexion.</p>
+    </div>
+  </section>
 
+  <section class="unique">
     <h2>Ce qui rend (In)solite unique</h2>
-    <ul>
-      <li>Des lieux atypiques à découvrir à chaque édition : <strong>rooftops, bureaux, cafés, champs, galeries d’art</strong>...</li>
-      <li>Pas d’alcool, mais des boissons qui stimulent autrement : <strong>café de spécialité, matcha, infusions, softs artisanaux</strong></li>
-      <li>Une ambiance inclusive, bienveillante, loin du clubbing conventionnel</li>
-    </ul>
+    <div class="section-content">
+      <p><strong>Des lieux atypiques à découvrir à chaque édition :</strong><br>
+      rooftops, bureaux, cafés, champs, galeries d’art...</p>
+      <p><strong>Pas d’alcool</strong>, mais des boissons qui stimulent autrement :<br>
+      café de spécialité, matcha, infusions, softs artisanaux</p>
+      <p><strong>Une ambiance inclusive</strong>, bienveillante, loin du clubbing conventionnel</p>
+    </div>
+  </section>
 
+  <section class="ambiances">
     <h2>3 Ambiances</h2>
-    <ul>
-      <li><strong>Morning Rise</strong> : 6h00 – 13h00 (Café Croissants - Matcha - Tchaï Latté)</li>
-      <li><strong>Midday Groove</strong> : 10h00 – 16h00 (Brunch & Sound)</li>
-      <li><strong>Golden Hour</strong> : 17h00 – 21h00 (Apéritif sans alcool & softs artisanaux)</li>
-    </ul>
-
+    <div class="section-content">
+      <p><strong>Morning Rise</strong> : 6h00 – 13h00 (Café Croissants – Matcha – Tchaï Latté)</p>
+      <p><strong>Midday Groove</strong> : 10h00 – 16h00 (Brunch & Sound)</p>
+      <p><strong>Golden Hour</strong> : 17h00 – 21h00 (Apéritif sans alcool & softs artisanaux)</p>
+    </div>
     <a href="#" class="button">S'inscrire à la prochaine session</a>
   </section>
 
