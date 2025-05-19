@@ -78,6 +78,91 @@
       padding: 2rem 1rem;
       font-size: 0.8rem;
     }
+    /* Container général */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Grille responsive */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.column-xs-12 {
+  flex: 0 0 100%;
+  padding: 1rem;
+}
+
+.column-md-6 {
+  flex: 0 0 50%;
+  padding: 1rem;
+}
+
+/* Bloc image */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Image style */
+.img-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.img-container:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+/* Légendes par défaut et au survol */
+.img-content,
+.img-content-hover {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 2;
+  max-width: 85%;
+  text-align: left;
+}
+
+/* Texte visible au repos */
+.img-content {
+  color: var(--text-color); /* #93A192 */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+/* Texte visible au survol */
+.img-content-hover {
+  display: none;
+  color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.img-container:hover .img-content-hover {
+  display: block;
+}
+
+.img-container:hover .img-content {
+  display: none;
+}
   </style>
 </head>
 <body>
@@ -132,6 +217,37 @@
     Le prochain événement sera publié ici afin de réserver votre place.
   </div>
 </section>
+
+  <section class="gallery">
+  <h2>Événements passés</h2>
+  <div class="container">
+    <div class="grid">
+      <div class="column-xs-12 column-md-6">
+        <figure class="img-container">
+          <img src="https://raw.githubusercontent.com/ton-user/ton-repo/main/images/event1.jpg" />
+          <figcaption class="img-content">
+            <h2 class="title">Rooftop Sunrise</h2>
+            <h3 class="category">Avril 2025</h3>
+          </figcaption>
+          <span class="img-content-hover">
+            <h2 class="title">Rooftop Sunrise</h2>
+            <h3 class="category">Avril 2025</h3>
+          </span>
+        </figure>
+      </div>
+      <div class="column-xs-12 column-md-6">
+        <figure class="img-container">
+          <img src="https://raw.githubusercontent.com/ton-user/ton-repo/main/images/event2.jpg" />
+          <figcaption class="img-content">
+            <h2 class="title">Golden Hour Dance</h2>
+            <h3 class="category">Mars 2025</h3>
+          </figcaption>
+          <span class="img-content-hover">
+            <h2 class="title">Golden Hour Dance</h2>
+            <h3 class="category">Mars 2025</h3>
+          </span>
+        </figure>
+      </div>
 
   <footer>
     <p>&copy; 2025 (in)solite.</a></p>
