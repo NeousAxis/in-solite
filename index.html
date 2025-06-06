@@ -7,101 +7,74 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <style>
     :root {
-      --primary-color: #ffffff;
-      --text-color: #93A192;
-      --accent-color: #C0CEC5;
-    }
+  --primary-color: #FAF6F0;  /* Beige clair pour faire ressortir le logo blanc */
+  --text-color: #C3A890;     /* Beige doux pour le texte */
+  --accent-color: #C3A890;   /* Même couleur pour l'accent */
+}
 
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: var(--primary-color);
-      color: var(--text-color);
-      text-align: center;
-    }
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+}
 
-    header {
-      padding: 4rem 1rem 2rem;
-    }
+header {
+  padding: 4rem 1rem 2rem;
+}
 
-    header img {
-  width: 240px;
+header img {
+  width: 180px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);  /* ombre douce autour du cercle */
   margin-bottom: 1.5rem;
 }
 
-    h1, h2 {
-      font-weight: 300;
-    }
+h1, h2 {
+  font-weight: 300;
+  color: var(--text-color);
+}
 
-    section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-
-    .ambiances-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    .ambiance {
-      flex: 1 1 220px;
-    }
-
-    .button {
-      background-color: var(--accent-color);
-      color: var(--primary-color);
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 2rem;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 2rem;
-    }
-
-    .event-placeholder {
-      margin-top: 3rem;
-      padding: 3rem 1rem;
-      border: 2px dashed var(--accent-color);
-      border-radius: 1rem;
-      font-size: 1rem;
-      font-style: italic;
-      background-color: #f8f8f8;
-    }
-
-    footer {
-      padding: 2rem 1rem;
-      font-size: 0.8rem;
-    }
-    /* Container général */
-.container {
-  width: 90%;
+section {
+  max-width: 800px;
   margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
-/* Grille responsive */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -1rem;
+/* Bouton harmonisé */
+.button {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.column-xs-12 {
-  flex: 0 0 100%;
-  padding: 1rem;
+.button:hover {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
-.column-md-6 {
-  flex: 0 0 50%;
-  padding: 1rem;
+/* Event placeholder */
+.event-placeholder {
+  margin-top: 3rem;
+  padding: 3rem 1rem;
+  border: 2px dashed var(--accent-color);
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+  background-color: #f8f8f8;
 }
 
-/* Bloc image */
+/* Image containers et effet au survol */
 .img-container {
   position: relative;
   overflow: hidden;
@@ -110,7 +83,6 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Image style */
 .img-container img {
   display: block;
   width: 100%;
@@ -125,7 +97,6 @@
   transform: scale(1.03);
 }
 
-/* Légendes par défaut et au survol */
 .img-content,
 .img-content-hover {
   position: absolute;
@@ -136,16 +107,14 @@
   text-align: left;
 }
 
-/* Texte visible au repos */
 .img-content {
-  color: var(--text-color); /* #93A192 */
+  color: var(--text-color);
   background-color: rgba(255, 255, 255, 0.8);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-weight: 500;
 }
 
-/* Texte visible au survol */
 .img-content-hover {
   display: none;
   color: var(--text-color);
