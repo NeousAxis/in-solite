@@ -139,6 +139,14 @@ section {
   padding: 1rem;
   box-sizing: border-box;
 }
+    .instagram-icon {
+  transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.instagram-icon:hover {
+  transform: scale(1.2);
+  stroke: var(--accent-color);
+}
   </style>
 </head>
 <body>
@@ -215,9 +223,7 @@ section {
   </div>
 </section>
   
-  <footer>
-    <p>&copy; 2025 (in)solite.</a></p>
-  <!-- Icône Instagram -->
+  <footer style="color: var(--text-color); text-align: center; padding: 2rem;">
   <a
     href="https://www.instagram.com/ton_compte_instagram/"
     target="_blank"
@@ -225,7 +231,7 @@ section {
     aria-label="Instagram"
     style="display: inline-block; cursor: pointer; margin-top: 1rem;"
   >
-    <!-- SVG Instagram avec animation au survol -->
+    <!-- Icône Instagram avec stroke="currentColor" -->
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="28"
@@ -244,6 +250,6 @@ section {
     </svg>
   </a>
   <p>&copy; 2025 (in)solite.</p>
-  </footer>
+</footer>
 </body>
 </html>
