@@ -193,6 +193,25 @@ section {
     Le prochain événement sera publié ici.
   </div>
 </section>
+  'use client';
+
+import { InstagramIcon } from '@/components/InstagramIcon';
+
+const InstagramLink = () => {
+  return (
+    <a
+      href="www.instagram.com/insolite_ch"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+      style={{ display: 'inline-block', cursor: 'pointer' }}
+    >
+      <InstagramIcon size={28} />
+    </a>
+  );
+};
+
+export default InstagramLink;
 
   <section class="gallery">
   <h2>Événements passés</h2>
