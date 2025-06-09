@@ -193,25 +193,6 @@ section {
     Le prochain événement sera publié ici.
   </div>
 </section>
-  'use client';
-
-import { InstagramIcon } from '@/components/InstagramIcon';
-
-const InstagramLink = () => {
-  return (
-    <a
-      href="www.instagram.com/insolite_ch"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Instagram"
-      style={{ display: 'inline-block', cursor: 'pointer' }}
-    >
-      <InstagramIcon size={28} />
-    </a>
-  );
-};
-
-export default InstagramLink;
 
   <section class="gallery">
   <h2>Événements passés</h2>
@@ -236,6 +217,33 @@ export default InstagramLink;
   
   <footer>
     <p>&copy; 2025 (in)solite.</a></p>
+  <!-- Icône Instagram -->
+  <a
+    href="https://www.instagram.com/ton_compte_instagram/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    style="display: inline-block; cursor: pointer; margin-top: 1rem;"
+  >
+    <!-- SVG Instagram avec animation au survol -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="instagram-icon"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+    </svg>
+  </a>
+  <p>&copy; 2025 (in)solite.</p>
   </footer>
 </body>
 </html>
